@@ -178,7 +178,13 @@ button:hover {
     padding: 15px;
   }
 
+  
+
   .header-right-side img {
-    width: 100%;
-  }
+  width: 100%;
+  max-width: 670px;
+  height: auto;
+  object-fit: contain;
+}
+
 }
