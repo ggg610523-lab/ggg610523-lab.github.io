@@ -12,6 +12,42 @@
 <h1>projects</h1>
 </center>
 
+<style>
+    /* Container to maintain 16:9 aspect ratio */
+    .video-container {
+      position: relative;
+      width: 100%;            /* Full width of parent */
+      max-width: 640px;       /* Optional max width */
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    /* Video fills the container */
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br>
 <center>
@@ -20,7 +56,8 @@
 </center>
 <center>
 
-    <video controls width="640" height="360">
+  
+    <video controls width="auto" height="auto">
   <source src="https://v.redd.it/t77kpp72h4ag1/HLSPlaylist.m3u8?a=…&v=1&f=sd" type="application/vnd.apple.mpegurl">
   Your browser does not support HLS natively.
 </video>
