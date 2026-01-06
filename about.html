@@ -11,20 +11,19 @@
 <center>
 <h1>projects</h1>
 </center>
-
-<style>
-    /* Container to maintain 16:9 aspect ratio */
+  <style>
+    /* Container keeps 16:9 ratio */
     .video-container {
       position: relative;
-      width: 100%;            /* Full width of parent */
-      max-width: 640px;       /* Optional max width */
+      width: 100%;        /* Default: full width */
+      max-width: 640px;   /* Desktop max width */
       padding-bottom: 56.25%; /* 16:9 aspect ratio */
       height: 0;
       overflow: hidden;
+      margin: 0 auto;     /* Center on screen */
       background: #000;
     }
 
-    /* Video fills the container */
     .video-container video {
       position: absolute;
       top: 0;
@@ -33,9 +32,25 @@
       height: 100%;
     }
 
+    /* Smaller size on small screens */
+    @media (max-width: 480px) {
+      .video-container {
+        max-width: 320px;   /* Smaller on phones */
+        padding-bottom: 56.25%; /* keep 16:9 ratio */
+      }
+    }
+  </style>
+</head>
+<body>
 
-</style>
+<h2>Reddit Video (Mobile Friendly)</h2>
 
+<div class="video-container">
+  <video controls>
+    <source src="https://v.redd.it/t77kpp72h4ag1/HLSPlaylist.m3u8?a=1770285775%2CN2JmMjhlZDliZTRjNWExMzgyZjA3ZjRkZjZmMGFhNTY4MjRiZWJmODA3OGJiZjUwNjg1OWRiZTQwMzdjMzJlNA%3D%3D&v=1&f=sd" type="application/vnd.apple.mpegurl">
+    Your browser does not support HLS natively.
+  </video>
+</div>
 
 
 
