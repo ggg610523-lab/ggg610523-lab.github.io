@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SuperDock - The Ultimate macOS Dock Replacement</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    /* Reset & base */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background: #0d0d0d; color: #fff; line-height: 1.6; }
+    a { color: #1e90ff; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* Container */
+    .container { width: 90%; max-width: 1200px; margin: auto; }
+
+    /* Header / Hero */
+    header { text-align: center; padding: 100px 20px 50px; background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); }
+    header h1 { font-size: 3rem; font-weight: 700; margin-bottom: 20px; }
+    header p { font-size: 1.2rem; margin-bottom: 40px; color: #ccc; }
+    header .btn { background: #1e90ff; color: #fff; padding: 15px 30px; border-radius: 8px; font-weight: 600; transition: 0.3s; }
+    header .btn:hover { background: #1c7cd6; }
+
+    /* Features Section */
+    section.features { padding: 80px 0; text-align: center; }
+    section.features h2 { font-size: 2rem; margin-bottom: 50px; }
+    .feature-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+    .feature { background: #1a1a1a; padding: 30px; border-radius: 16px; flex: 1 1 250px; max-width: 300px; transition: transform 0.3s; }
+    .feature:hover { transform: translateY(-10px); }
+    .feature h3 { margin-bottom: 15px; color: #1e90ff; }
+    .feature p { color: #ccc; }
+
+    /* Screenshots Section */
+    section.screenshots { padding: 80px 0; background: #111; text-align: center; }
+    section.screenshots h2 { font-size: 2rem; margin-bottom: 50px; }
+    .screenshots-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .screenshot { flex: 1 1 250px; border-radius: 16px; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+
+    /* Footer */
+    footer { text-align: center; padding: 40px 20px; color: #888; font-size: 0.9rem; background: #0d0d0d; }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<header>
+    <div class="container">
+        <h1>SuperDock</h1>
+        <p>The Ultimate Dock Replacement for macOS – faster, smarter, and customizable.</p>
+        <a href="#download" class="btn">Download Now</a>
+    </div>
+</header>
+
+<!-- Features -->
+<section class="features">
+    <div class="container">
+        <h2>Why SuperDock?</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Dynamic & Smooth</h3>
+                <p>Experience a silky smooth dock animation with real-time app bounce and resizing effects.</p>
+            </div>
+            <div class="feature">
+                <h3>Customizable Layout</h3>
+                <p>Arrange apps, widgets, and utilities exactly how you want. Drag, drop, and reorder effortlessly.</p>
+            </div>
+            <div class="feature">
+                <h3>Lightweight & Efficient</h3>
+                <p>Consumes minimal CPU and RAM while giving you a polished, professional look for your desktop.</p>
+            </div>
+            <div class="feature">
+                <h3>Smart Recent Apps</h3>
+                <p>Quickly access your most recently used apps with a bouncing icon effect and context menu.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Screenshots -->
+<section class="screenshots">
+    <div class="container">
+        <h2>Screenshots</h2>
+        <div class="screenshots-grid">
+            <div class="screenshot"><img src="dock1.png" alt="SuperDock Screenshot 1"></div>
+            <div class="screenshot"><img src="dock2.png" alt="SuperDock Screenshot 2"></div>
+            <div class="screenshot"><img src="dock3.png" alt="SuperDock Screenshot 3"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Download -->
+<section id="download" style="padding: 80px 0; text-align:center;">
+    <div class="container">
+        <h2>Get SuperDock Today for 2$</h2>
+        <p>Compatible with macOS Big Sur, Monterey, and Ventura.</p>
+        <a href="https://github.com/username/superdock/releases" class="btn">Download Latest Version</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    &copy; 2026 SuperDock. Made for macOS enthusiasts. <br>
+    <a href="https://github.com/username/superdock">GGG610523</a>
+</footer>
+
+</body>
+</html>
