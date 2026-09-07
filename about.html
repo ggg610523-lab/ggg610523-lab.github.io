@@ -1,89 +1,59 @@
 <!DOCTYPE html>
-
-<title> About</title>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gotham v.s</title>
+  <title>Projects — Gautamvir Singh</title>
   <link rel="stylesheet" href="style.css">
-</head>
-
-<center>
-<h1>projects</h1>
-</center>
-  <style>
-    /* Container keeps 16:9 ratio */
-    .video-container {
-      position: relative;
-      width: 100%;        /* Default: full width */
-      max-width: 640px;   /* Desktop max width */
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      height: 0;
-      overflow: hidden;
-      margin: 0 auto;     /* Center on screen */
-      background: #000;
-    }
-
-    .video-container video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Smaller size on small screens */
-    @media (max-width: 480px) {
-      .video-container {
-        max-width: 320px;   /* Smaller on phones */
-        padding-bottom: 56.25%; /* keep 16:9 ratio */
-      }
-    }
-  </style>
 </head>
 <body>
 
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">GS<span>.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="paper.html">Papers</a>
+        <a href="about.html">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-<br>
-<br>
-  <center>
-<p><hw class = "custom">SuperDock : MacOS Dock Replacement</hw></p>
-    <br>
-    <br>
-<a href ="dock.html"><button>download Superdock now!</button></a>
-  </center>
-  
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Stuff I've been building and experimenting with.</p>
 
-<br>
-<center>
-<p>Rezero Souls like fan made game in  <hw class ="custom"> Unreal engine 5</h> </p>
-<br>
-</center>
-<center>
+      <div class="cards">
+        <div class="card">
+          <h3>SuperDock — macOS Dock Replacement</h3>
+          <p>A custom, faster and smarter dock replacement for macOS. Grab the download below.</p>
+          <a class="btn btn-primary" href="dock.html">Download SuperDock</a>
+        </div>
 
- 
-<div class="video-container">
-  <video controls>
-    <source src="https://v.redd.it/t77kpp72h4ag1/HLSPlaylist.m3u8?a=1770285775%2CN2JmMjhlZDliZTRjNWExMzgyZjA3ZjRkZjZmMGFhNTY4MjRiZWJmODA3OGJiZjUwNjg1OWRiZTQwMzdjMzJlNA%3D%3D&v=1&f=sd" type="application/vnd.apple.mpegurl">
-    Your browser does not support HLS natively.
-  </video>
-</div>
+        <div class="card">
+          <h3>Rezero — Souls-like Fan Game</h3>
+          <p>A fan-made Souls-like game built in Unreal Engine 5. Here's a look at the current prototype.</p>
+        </div>
+      </div>
 
+      <div style="margin-top: 48px;">
+        <h3 class="section-title" style="font-size: 20px;">Rezero <span>Gameplay</span></h3>
+        <div class="video-wrapper">
+          <video controls>
+            <source src="https://v.redd.it/t77kpp72h4ag1/HLSPlaylist.m3u8?a=1770285775%2CN2JmMjhlZDliZTRjNWExMzgyZjA3ZjRkZjZmMGFhNTY4MjRiZWJmODA3OGJiZjUwNjg1OWRiZTQwMzdjMzJlNA%3D%3D&v=1&f=sd" type="application/vnd.apple.mpegurl">
+            Your browser does not support HLS natively.
+          </video>
+        </div>
+      </div>
 
+    </div>
+  </section>
 
+  <footer class="footer">
+    Copyright &copy; Gautamvir Singh
+  </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-<br>
- <h3>Copyright © Gautamvir Singh </h3>
-
+</body>
 </html>
