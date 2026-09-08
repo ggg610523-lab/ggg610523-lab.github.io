@@ -3,26 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SuperDock - The Ultimate macOS Dock Replacement</title>
+<title>SuperDock — The Ultimate macOS Dock Replacement</title>
+<meta name="description" content="SuperDock — A faster, smarter, customizable dock replacement for macOS. Dynamic animations, lightweight footprint.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ggg610523-lab.github.io/dock.html">
+
+<meta property="og:title" content="SuperDock — macOS Dock Replacement">
+<meta property="og:description" content="A faster, smarter, customizable dock replacement for macOS.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ggg610523-lab.github.io/dock.html">
+<meta property="og:image" content="https://ggg610523-lab.github.io/dock1.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SuperDock — macOS Dock Replacement">
+<meta name="twitter:description" content="A faster, smarter, customizable dock replacement for macOS.">
+<meta name="twitter:image" content="https://ggg610523-lab.github.io/dock1.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SuperDock",
+  "description": "A faster, smarter, customizable dock replacement for macOS. Dynamic animations, lightweight footprint.",
+  "url": "https://ggg610523-lab.github.io/dock.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "macOS",
+  "offers": {
+    "@type": "Offer",
+    "price": "2.00",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Gautamvir Singh",
+    "url": "https://ggg610523-lab.github.io/"
+  },
+  "screenshot": [
+    "https://ggg610523-lab.github.io/dock1.png",
+    "https://ggg610523-lab.github.io/dock2.png",
+    "https://ggg610523-lab.github.io/dock3.png"
+  ],
+  "softwareVersion": "1.0",
+  "featureList": [
+    "Dynamic animations",
+    "Customizable layouts",
+    "Lightweight footprint",
+    "Smart recent apps"
+  ]
+}
+</script>
+
 <style>
-    /* Reset & base */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body { background: #0d0d0d; color: #fff; line-height: 1.6; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0d0d0d; color: #fff; line-height: 1.6; font-family: 'Inter', sans-serif; }
     a { color: #1e90ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
     img { max-width: 100%; display: block; }
 
-    /* Container */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #1e90ff;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 100;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+
     .container { width: 90%; max-width: 1200px; margin: auto; }
 
-    /* Header / Hero */
     header { text-align: center; padding: 100px 20px 50px; background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); }
     header h1 { font-size: 3rem; font-weight: 700; margin-bottom: 20px; }
     header p { font-size: 1.2rem; margin-bottom: 40px; color: #ccc; }
-    header .btn { background: #1e90ff; color: #fff; padding: 15px 30px; border-radius: 8px; font-weight: 600; transition: 0.3s; }
-    header .btn:hover { background: #1c7cd6; }
+    header .btn { display: inline-block; background: #1e90ff; color: #fff; padding: 15px 30px; border-radius: 8px; font-weight: 600; transition: 0.3s; }
+    header .btn:hover { background: #1c7cd6; text-decoration: none; }
 
-    /* Features Section */
     section.features { padding: 80px 0; text-align: center; }
     section.features h2 { font-size: 2rem; margin-bottom: 50px; }
     .feature-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
@@ -31,90 +91,96 @@
     .feature h3 { margin-bottom: 15px; color: #1e90ff; }
     .feature p { color: #ccc; }
 
-    /* Screenshots Section */
     section.screenshots { padding: 80px 0; background: #111; text-align: center; }
     section.screenshots h2 { font-size: 2rem; margin-bottom: 50px; }
     .screenshots-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
     .screenshot { flex: 1 1 250px; border-radius: 16px; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
 
-    /* Footer */
+    section.download { padding: 80px 0; text-align: center; }
+
     footer { text-align: center; padding: 40px 20px; color: #888; font-size: 0.9rem; background: #0d0d0d; }
 </style>
 </head>
 <body>
 
-<!-- Nav -->
-<nav style="position: sticky; top: 0; z-index: 50; background: rgba(13,13,13,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid #222;">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation" style="position: sticky; top: 0; z-index: 50; background: rgba(13,13,13,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid #222;">
     <div style="max-width: 1200px; margin: auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between;">
-        <a href="index.html" style="color: #fff; font-weight: 700; text-decoration: none;">GS<span style="color: #1e90ff;">.</span></a>
-        <div style="display: flex; gap: 24px; font-size: 14px;">
-            <a href="index.html" style="color: #999; text-decoration: none;">Home</a>
-            <a href="paper.html" style="color: #999; text-decoration: none;">Papers</a>
-            <a href="about.html" style="color: #999; text-decoration: none;">Projects</a>
-            <a href="index.html#contact" style="color: #1e90ff; text-decoration: none;">Contact</a>
+        <a href="index.html" style="color: #fff; font-weight: 700; text-decoration: none;" aria-label="Gautamvir Singh — Home">GS<span aria-hidden="true" style="color: #1e90ff;">.</span></a>
+        <div style="display: flex; gap: 24px; font-size: 14px;" role="list">
+            <a href="index.html" style="color: #999; text-decoration: none;" role="listitem">Home</a>
+            <a href="paper.html" style="color: #999; text-decoration: none;" role="listitem">Papers</a>
+            <a href="about.html" style="color: #999; text-decoration: none;" role="listitem">Projects</a>
+            <a href="index.html#contact" style="color: #1e90ff; text-decoration: none;" role="listitem">Contact</a>
         </div>
     </div>
 </nav>
 
-<!-- Hero -->
+<main id="main-content">
+
 <header>
     <div class="container">
         <h1>SuperDock</h1>
-        <p>The Ultimate Dock Replacement for macOS – faster, smarter, and customizable.</p>
+        <p>The Ultimate Dock Replacement for macOS — faster, smarter, and customizable.</p>
         <a href="#download" class="btn">Download Now</a>
     </div>
 </header>
 
-<!-- Features -->
-<section class="features">
+<section class="features" aria-labelledby="features-heading">
     <div class="container">
-        <h2>Why SuperDock?</h2>
-        <div class="feature-grid">
-            <div class="feature">
-                <h3>Dynamic & Smooth</h3>
+        <h2 id="features-heading">Why SuperDock?</h2>
+        <div class="feature-grid" role="list">
+            <article class="feature" role="listitem">
+                <h3>Dynamic &amp; Smooth</h3>
                 <p>Experience a silky smooth dock animation with real-time app bounce and resizing effects.</p>
-            </div>
-            <div class="feature">
+            </article>
+            <article class="feature" role="listitem">
                 <h3>Customizable Layout</h3>
                 <p>Arrange apps, widgets, and utilities exactly how you want. Drag, drop, and reorder effortlessly.</p>
-            </div>
-            <div class="feature">
-                <h3>Lightweight & Efficient</h3>
+            </article>
+            <article class="feature" role="listitem">
+                <h3>Lightweight &amp; Efficient</h3>
                 <p>Consumes minimal CPU and RAM while giving you a polished, professional look for your desktop.</p>
-            </div>
-            <div class="feature">
+            </article>
+            <article class="feature" role="listitem">
                 <h3>Smart Recent Apps</h3>
                 <p>Quickly access your most recently used apps with a bouncing icon effect and context menu.</p>
-            </div>
+            </article>
         </div>
     </div>
 </section>
 
-<!-- Screenshots -->
-<section class="screenshots">
+<section class="screenshots" aria-labelledby="screenshots-heading">
     <div class="container">
-        <h2>Screenshots</h2>
-        <div class="screenshots-grid">
-            <div class="screenshot"><img src="dock1.png" alt="SuperDock Screenshot 1"></div>
-            <div class="screenshot"><img src="dock2.png" alt="SuperDock Screenshot 2"></div>
-            <div class="screenshot"><img src="dock3.png" alt="SuperDock Screenshot 3"></div>
+        <h2 id="screenshots-heading">Screenshots</h2>
+        <div class="screenshots-grid" role="list">
+            <figure class="screenshot" role="listitem">
+                <img src="dock1.png" alt="SuperDock showing app icons with magnification effect on macOS desktop" width="400" height="300" loading="lazy">
+            </figure>
+            <figure class="screenshot" role="listitem">
+                <img src="dock2.png" alt="SuperDock settings panel with customization options" width="400" height="300" loading="lazy">
+            </figure>
+            <figure class="screenshot" role="listitem">
+                <img src="dock3.png" alt="SuperDock in dark mode with recent apps section" width="400" height="300" loading="lazy">
+            </figure>
         </div>
     </div>
 </section>
 
-<!-- Download -->
-<section id="download" style="padding: 80px 0; text-align:center;">
+<section id="download" class="download" aria-labelledby="download-heading">
     <div class="container">
-        <h2>Get SuperDock Today for 2$</h2>
+        <h2 id="download-heading">Get SuperDock Today for $2</h2>
         <p>Compatible with macOS Big Sur, Monterey, and Ventura.</p>
-        <a href="https://github.com/username/superdock/releases" class="btn">Download Latest Version</a>
+        <a href="https://github.com/username/superdock/releases" class="btn" rel="noopener noreferrer" target="_blank">Download Latest Version <span class="sr-only">(opens in new tab)</span></a>
     </div>
 </section>
 
-<!-- Footer -->
+</main>
+
 <footer>
-    &copy; 2026 SuperDock. Made for macOS enthusiasts. <br>
-    <a href="https://github.com/username/superdock">GGG610523</a>
+    <p>&copy; <time datetime="2026">2026</time> SuperDock. Made for macOS enthusiasts.</p>
+    <p><a href="https://github.com/username/superdock" rel="noopener noreferrer" target="_blank">GGG610523 <span class="sr-only">(opens in new tab)</span></a></p>
 </footer>
 
 </body>
